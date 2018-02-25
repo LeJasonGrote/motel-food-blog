@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+
+	{{! Styles }}
+	<link href="{{asset "css/normalize.css"}}" rel="stylesheet"/>
+	<link href="{{asset "css/screen.css"}}" rel="stylesheet"/>
+	<link href="{{asset "css/responsive.css"}}" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,400i,500,600,700" rel="stylesheet">
+
+	{{! Responsive Meta Tags }}
+	<meta name="HandheldFriendly" content="True" />
+	<meta name="MobileOptimized" content="320" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	{{ghost_head}}
+</head>
+
+<body class="{{body_class}}" itemscope itemtype="http://schema.org/WebPage">
+	{{! Header }}
+	<header class="header-outer">{{> header}}</header>
+
+	<div class="container">
+	{{{body}}}
+	</div>
+
+	{{! Widget }}
+	{{> footer}}
+
+	{{ghost_foot}}
+
+	{{! The main JavaScript file for Mocha }}
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="{{asset "js/ghostHunter.js"}}"></script>
+	<script src="{{asset "js/custom.js"}}"></script>
+</body>
+</html>

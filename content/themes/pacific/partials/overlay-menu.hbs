@@ -1,0 +1,39 @@
+<aside class="overlay menu-overlay">
+	<div class="outer-close toggle-menu">
+		<a class="close">Close</a>
+	</div>
+
+	<nav class="browse-menu">
+		<div class="sidebar grid grid-onethird">
+			{{! Menu }}
+			<div class="grid-item widget widget-navigation">
+				<div class="widget-content">{{navigation}}</div>
+			</div>
+
+			{{! Mini Bio }}
+			<div class="grid-item widget widget-about">
+				<div class="widget-content">
+					<div class="user-profile">
+						<figure class="user-avatar" style="background-image: url({{asset "images/avatar.jpg"}}">&nbsp;</figure>
+						<h4 class="title">Hi!</h4>
+						<p class="user-description">MINI DESCRIPTION</p>
+						<a class="user-readmore" href="LINK">Read More</a>
+					</div>
+				</div>
+			</div>
+
+			{{! Contact Form }}
+			<div class="grid-item widget widget-contact">
+				<h5 class="title">Get in touch</h5>
+				<div class="clearfix widget-content">
+					<form method="POST" action="http://formspree.io/YOUREMAILHERE">
+						<input type="text" placeholder="Name" name="name">
+						<input type="email" name="email" placeholder="Email">
+						<textarea name="message" placeholder="Message"></textarea>
+						<button type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+</aside>

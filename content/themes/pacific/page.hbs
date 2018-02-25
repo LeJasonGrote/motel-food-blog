@@ -1,0 +1,19 @@
+{{!< default}}
+
+<div class="main-outer" id="singlepage">
+	<main class="main-inner clearfix">
+	{{#post}}
+		<article class="{{post_class}}" itemscope itemtype="http://schema.org/BlogPosting">
+			<div class="post-cover {{#if feature_image}}" style="background-image: url({{img_url feature_image}}){{else}}no-cover{{/if}}" itemprop="image" content="{{img_url feature_image}}">
+				<ul class="post-header">
+					<li class="section post-title" itemprop="name"><h2 class="title">{{title}}</h2></li>
+				</ul>
+			</div>
+
+			<section class="section post-body" itemprop="articleBody">{{content}}</section>
+
+			<hr/>
+		</article>
+	{{/post}}
+	</main>
+</div>

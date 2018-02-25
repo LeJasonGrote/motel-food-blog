@@ -1,0 +1,28 @@
+{{!< default}}
+
+<div class="main-outer" id="homepage">
+	{{#author}}
+	<aside class="search-term text-center">
+		<p>{{plural ../pagination.total empty='No post' singular='% post' plural='% posts'}} by</p>
+		<h4 class="title">"<em>{{name}}</em>"</h4>
+	</aside>
+	{{/author}}
+
+	<main class="main-inner clearfix">
+	{{#foreach posts}}
+		<article class="{{post_class}} clearfix" itemscope itemtype="http://schema.org/BlogPosting">
+			<div class="post-cover" style="background-image: url({{img_url feature_image}})" itemprop="image" content="{{img_url feature_image}}">
+				<ul class="post-header">
+					<li class="post-date label"><div class="date-outer"><span>{{date format='DD'}}</span><span>{{date format='MMM'}}</span></div></li>
+					<li class="section post-title" itemprop="name"><h2 class="title"><a rel="bookmark" href="{{{url}}}">{{title}}</a></h2></li>
+				</ul>
+				<ul class="section post-footer">
+					<li class="post-tags">{{#if tags}}{{tags separator=", "}}{{else}}Uncategorized{{/if}}</li>
+				</ul>
+			</div>
+		</article>
+	{{/foreach}}
+	</main>
+
+	<div class="pagination-outer">{{{pagination}}}</div>
+</div>

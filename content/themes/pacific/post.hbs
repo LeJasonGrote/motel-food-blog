@@ -1,0 +1,39 @@
+{{!< default}}
+
+<div class="main-outer" id="singlepage">
+	<main class="main-inner clearfix">
+	{{#post}}
+		<article class="{{post_class}}" itemscope itemtype="http://schema.org/BlogPosting">
+			<div class="post-cover" style="background-image: url({{img_url feature_image}})" itemprop="image" content="{{img_url feature_image}}">
+			</div>
+
+			<div>
+				<ul class="post-header">
+					<li class="post-date label"><div class="date-outer"><span>{{date format='DD'}}</span><span>{{date format='MMM'}}</span></div></li>
+					<li class="section post-title" itemprop="name"><h2 class="title">{{title}}</h2></li>
+				</ul>
+			</div>
+
+			<section class="section post-body" itemprop="articleBody">{{content}}</section>
+
+
+			<ul class="section post-footer">
+				<li class="post-tags">{{#if tags}}{{tags separator=", "}}{{else}}Uncategorized{{/if}}</li>
+				<li class="post-author">{{#author}}<a class="author-name" href="{{url}}" itemprop="name">{{name}}</a>{{/author}}</li>
+			</ul>
+			<div class="section sharing-button-outer">
+				<ul class="sharing-button">
+					<li class="icon-facebook"><a target="_blank" href="https://www.facebook.com/sharer.php?u={{url absolute="true"}}">Facebook</a></li>
+					<li class="icon-twitter"><a target="_blank" href="https://twitter.com/share?text={{title}}&amp;url={{url absolute="true"}}">Twitter</a></li>
+					<li class="icon-pinterest"><a target="_blank" href="http://pinterest.com/pin/create/link/?url={{url absolute="true"}}">Pinterest</a></li>
+					<li class="icon-gplus"><a target="_blank" href="https://plus.google.com/share?url={{url absolute="true"}}">Google +</a></li>
+				</ul>
+			</div>
+		</article>
+
+		<div class="comment-outer">
+			<div class="section comments">{{> disqus}}</div>
+		</div>
+	{{/post}}
+	</main>
+</div>

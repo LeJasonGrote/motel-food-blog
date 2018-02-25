@@ -1,0 +1,15 @@
+<ul class="hero-img carousel">
+{{#foreach posts}}
+{{#if featured}}
+	<li class="item">
+		<div class="panel" style="background-image: url({{img_url feature_image}})">
+			<ul class="carousel-header">
+				<li class="post-date">{{date format='MMMM DD, YYYY'}}</li>
+				<li class="post-title"><a href="{{{url}}}">{{title}}<span>Read More [...]</span></a></li>
+			</ul>
+			<div class="carousel-gradient"></div>
+		</div>
+	</li>
+{{/if}}
+{{/foreach}}
+</ul>

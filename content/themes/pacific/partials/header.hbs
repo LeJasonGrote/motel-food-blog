@@ -1,0 +1,20 @@
+<p class="icon-nav toggle-menu"><span class="hamburger">Menu</span></p>
+<div class="header-inner container" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+	{{#if @blog.logo}}
+		<h1 class="site-title title"><a class="site-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a></h1>
+	{{else}}
+		<h1 class="site-title title"><a title="{{@blog.title}}" href="{{@blog.url}}" itemprop="headline">{{{@blog.title}}}</a></h1>
+		<p class="site-description" itemprop="description">{{@blog.description}}</p>
+	{{/if}}
+</div>
+
+<div class="icon-socialmedia">
+	<ul class="socialmedia">
+		<li class="icon-twitter"><a href="{{twitter_url}}">Twitter</a></li>
+		<li class="icon-facebook"><a href="{{facebook_url}}">Facebook</a></li>
+	</ul>
+	<button class="icon-search toggle-search">Toggle Me</button>
+</div>
+
+{{> overlay-search}}
+{{> overlay-menu}}

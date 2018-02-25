@@ -1,0 +1,15 @@
+{
+    "name": "pacific",
+    "description": "Responsive Ghost blog theme",
+    "version": "1.1.0",
+    "engines": {
+        "ghost": ">=1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "email": "biyanpasau@gmail.com"
+    },
+    "config": {
+        "posts_per_page": 7
+    }
+}

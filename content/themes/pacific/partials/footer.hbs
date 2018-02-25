@@ -1,0 +1,19 @@
+<aside class="footer-outer">
+	<div class="footer-inner sidebar">
+		{{#if @labs.subscribers}}
+		<section class="section gh-subscribe">
+			<h4 class="title">Newsletter</h4>
+		 	{{subscribe_form placeholder="Your email address"}}
+		</section>
+		{{/if}}
+
+		{{! Colophon}}
+		<ul class="socialmedia">
+			<li class="icon-twitter"><a href="{{twitter_url}}">Twitter</a></li>
+			<li class="icon-facebook"><a href="{{facebook_url}}">Facebook</a></li>
+		</ul>
+
+		{{! Colophon}}
+		<footer class="section colophon" itemscope itemtype="http://schema.org/WPFooter">&copy; Theme by <a href="http://heybi.com" itemprop="creator">Heybi</a>. Blog at <a href="http://ghost.org" itemprop="provider">Ghost</a>.</footer>
+	</div>
+</aside>
